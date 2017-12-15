@@ -6,8 +6,6 @@
  * Time: 16:10
  */
 
-list($a, $b, $c) = fscanf(STDIN, "%d %d %d");
-
 /**
 结合律
 ((a+b) mod p + c)mod p = (a + (b+c) mod p) mod p
@@ -36,4 +34,3 @@ function get_data($a, $b, $c)
     return $ans;
 }
 
-print get_data($a, $b, $c);
