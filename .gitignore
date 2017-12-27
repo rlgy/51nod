@@ -1,6 +1,3 @@
-# yii console command
-#/yii
-
 # phpstorm project files
 .idea
 
@@ -28,6 +25,6 @@ Thumbs.db
 phpunit.phar
 # local phpunit config
 /phpunit.xml
-mount-static
-#/framework/base/config/params.php
-./test
+
+# runtime file
+/cli.php
