@@ -28,3 +28,4 @@ phpunit.phar
 
 # runtime file
 cli.php
+index.php
