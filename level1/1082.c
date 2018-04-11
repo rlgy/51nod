@@ -26,7 +26,7 @@ Output示例
 
 #include <stdio.h>
 
-#define MAX 1000007
+#define MAX 1000001
 
 int is(int n) {
     if (n % 7 == 0) {
@@ -42,22 +42,23 @@ int is(int n) {
 }
 
 int main() {
-    int T, n;
+    int T, n, k = 0;
     long long ans[MAX] = {0};
     scanf("%d", &T);
 
     while (T--) {
         scanf("%d", &n);
-        if (ans[n] != 0) {
-            printf("%lld\n", ans[n]);
-        } else {
-            for (long long i = 1; i <= n; ++i) {
+        if (n > k) {
+            for (long long i = k + 1; i <= n; ++i) {
                 if (!is(i)) {
                     ans[i] = i * i + ans[i - 1];
                 } else {
                     ans[i] = ans[i - 1];
                 }
             }
+            printf("%lld\n", ans[n]);
+            k = n;
+        } else {
             printf("%lld\n", ans[n]);
         }
     }
